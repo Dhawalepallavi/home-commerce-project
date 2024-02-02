@@ -1,4 +1,4 @@
-# Copyright 2018 Google LLC
+ # Copyright 2018 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ spec:
       - name: deploy-pull-harbor
       containers:
       - name: server
-        image: adservice:v1
+        image: dhawalepallavi186/adservice_project_1:v1.1.1
         ports:
         - containerPort: 9555
         env:
@@ -66,7 +66,7 @@ kind: Service
 metadata:
   name: adservice
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: adservice
   ports:
